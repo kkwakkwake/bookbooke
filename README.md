@@ -10,16 +10,15 @@
 </br>
 
 ## 2. 기술 스택
-* React.js
+* React.js / styled-components
 
 </br>
 
 ## 3. 핵심기능
+* api를 활용한 도서 검색 기능
+* CRUD (local storage)
+* 평점기능
 
-#### 1.api를 활용한 도서 검색 기능\
-#### 2.CRUD (local storage)\
-3.평점기능\
-4.styled-components
 
 <!-- <details>
 <summary><b>백엔드</b></summary>
