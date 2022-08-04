@@ -19,6 +19,12 @@
 * CRUD (local storage)
 * 평점기능
 
+</br>
+
+## 4.트러블슈팅
+
+## 5. 회고
+
 
 <!-- <details>
 <summary><b>백엔드</b></summary>
