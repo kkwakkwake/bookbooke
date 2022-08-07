@@ -1,47 +1,12 @@
 import { useEffect, useState, useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import styled from 'styled-components';
+import { BookEditorWrapper, BookTitleInfo, BookInfo, BookEditorImg, BookEditorText } from './styled';
 
 import MyHeader from "./MyHeader";
 import MyButton from "./MyButton";
 import { MyBookStateContext } from "../App";
 import Stars from "../assets/Stars";
 
-const EditorSection = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-
-& h2 {
-  margin:10px auto;
-}
-
-& p {
-  margin: 10px auto;
-	color: gray;
-}
-
-& img{
-  margin: 10px auto;
-}
-
-& textarea {
-  margin-top: 20px;
-	box-sizing: border-box;
-	font-family: "SUIT";
-	width: 100%;
-	min-height: 300px;
-	resize: vertical;
-	border: none;
-	border-radius: 10px;
-  background-color: #fefae0;
-
-	padding: 10px;
-	font-size: 18px;
-	line-height: 1.5;
-}
-`;
 
 const BookEditor = ({ selectedBook, editState, newBook }) => {
   const { onCreate, onEdit } = useContext(MyBookStateContext);
@@ -144,7 +109,7 @@ const BookEditor = ({ selectedBook, editState, newBook }) => {
   console.log(origindata.authors);
 
   return (
-    <div className="BookEditor">
+    <>
       <MyHeader
         leftChild={<MyButton text={"<"} onClick={() => navigate(-1)} />}
         rightChild={
@@ -155,20 +120,20 @@ const BookEditor = ({ selectedBook, editState, newBook }) => {
           )
         }
       />
-      <section className="BookEditor_section">
-        <EditorSection>
-          <h2>{origindata.title}</h2>
-          <p>
+      <section>
+        <BookEditorWrapper>
+          <BookTitleInfo>{origindata.title}</BookTitleInfo>
+          <BookInfo>
             지은이 :
             {origindata.authors &&
               origindata.authors.length &&
               origindata.authors.join(",")}
-          </p>
-          <p>출판사 : {origindata.publisher}</p>
-          <img src={origindata.thumbnail} alt="1" />
+          </BookInfo>
+          <BookInfo>출판사 : {origindata.publisher}</BookInfo>
+          <BookEditorImg src={origindata.thumbnail} alt="1" />
           <div>
             {Stars.map((item) => (
-              <img
+              <BookEditorImg
                 name="rating"
                 value={origindata.rating}
                 onClick={handleStar}
@@ -178,15 +143,15 @@ const BookEditor = ({ selectedBook, editState, newBook }) => {
               />
             ))}
           </div>
-          <textarea
+          <BookEditorText
             name="content"
             value={origindata.content}
             ref={contentRef}
             onChange={onValueChange}
           />
-        </EditorSection>
+        </BookEditorWrapper>
       </section>
-    </div>
+    </>
   );
 };
 

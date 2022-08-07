@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import SearchingContext from './SearchingContext';
-import { bookSearch } from '../Components/Api';
+import { bookSearch } from '../components/Api';
 
 
 const SearchStateContext = ({ children }) => {

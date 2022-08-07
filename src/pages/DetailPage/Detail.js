@@ -1,49 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import styled from 'styled-components';
+import { DetailContainer, DetailTitle, DetailInfos, DetailStars, DetailContentWrapper, DetailContent } from './styled';
 
-import { TotalBook } from "../App";
-import { MyBookStateContext } from "../App";
+import { TotalBook } from "../../App";
+import { MyBookStateContext } from "../../App";
 
-import MyButton from "../Components/MyButton";
-import MyHeader from "../Components/MyHeader";
-import Stars from "../assets/Stars";
-
-const DetailInfo = styled.div`
-display: flex;
-flex-direction: column;
-text-align: center;
-align-items: center;
-
-& h2{
-  margin:10px auto;
-}
-
-& p {
-  margin: 10px auto;
-	color: gray;
-}
-
-& div {
-  margin-top: 20px;
-}
-`;
-
-const DetailContent = styled.div`
-width: 100%;
-background-color: #fefae0;
-	border-radius: 10px;
-	word-break: keep-all;
-	overflow-wrap: break-word;
-
-  & p {
-    padding: 10px;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-  }
-`;
+import MyButton from "../../components/MyButton";
+import MyHeader from "../../components/MyHeader";
+import Stars from "../../assets/Stars";
 
 const Detail = () => {
   const { id } = useParams();
@@ -100,9 +64,8 @@ const Detail = () => {
     }
 
     return (
-      <div className="Detail">
+      <>
         <MyHeader
-          className="MyHeader"
           leftChild={<MyButton text={"<"} onClick={() => navigate("/")} />}
           textHead={writtenDate}
           rightChild={
@@ -112,12 +75,12 @@ const Detail = () => {
             </div>
           }
         />
-        <DetailInfo className="Detail_Infos">
-          <h2>{title}</h2>
-          <p>지은이: {authors.length >= 2 ? authors.join(",") : authors}</p>
-          <p>출판사: {publisher}</p>
+        <DetailContainer>
+          <DetailTitle>{title}</DetailTitle>
+          <DetailInfos>지은이: {authors.length >= 2 ? authors.join(",") : authors}</DetailInfos>
+          <DetailInfos>출판사: {publisher}</DetailInfos>
           <img src={thumbnail} alt={title} />
-          <div>
+          <DetailStars>
             {Stars.map((item) => (
               <img
                 value={rating}
@@ -126,12 +89,12 @@ const Detail = () => {
                 src={item.star_img}
               />
             ))}
-          </div>
-          <DetailContent className="Detail_info_content">
-            <p>{content}</p>
-          </DetailContent>
-        </DetailInfo>
-      </div>
+          </DetailStars>
+          <DetailContentWrapper>
+            <DetailContent>{content}</DetailContent>
+          </DetailContentWrapper>
+        </DetailContainer>
+      </>
     );
   }
 };

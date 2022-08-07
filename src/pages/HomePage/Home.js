@@ -7,18 +7,16 @@ import React, {
 } from "react";
 import { useNavigate } from "react-router-dom";
 
-import BookList from "../Components/BookList";
-import MyHeader from "../Components/MyHeader";
-import MyButton from "../Components/MyButton";
-import YearList from '../Components/YearList';
-import { TotalBook } from "../App";
+import BookList from "../../components/BookList";
+import MyHeader from "../../components/MyHeader";
+import MyButton from "../../components/MyButton";
+import YearList from '../../components/YearList';
+import { TotalBook } from "../../App";
 
 
 const Home = () => {
   const navigate = useNavigate();
   const bookList = useContext(TotalBook);
-
-  console.log(bookList);
   const [yearlyBooks, setYearlyBooks] = useState();
 
   const [date, setDate] = useState(new Date());
@@ -49,11 +47,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="Home">
+    <div>
       <MyHeader
         leftChild={
           <YearList
-            className="YearList"
             value={curDate}
             list={years}
             onChange={handleYearList}

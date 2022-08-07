@@ -1,19 +1,13 @@
 import React from "react";
-import styled from 'styled-components';
+import { BookListContainer } from './styled';
 
 import BookItem from "./BookItem";
 
-const BookListCtl = styled.div`
-margin-top: 50px;
-display: grid;
-grid-template-columns: repeat(3, 33%);
-`;
-
 const BookList = ({ bookList }) => {
   return (
-    <BookListCtl className="BookList">
+    <BookListContainer>
       {bookList && bookList.map((book) => <BookItem key={book.id} {...book} />)}
-    </BookListCtl>
+    </BookListContainer>
   );
 };
 

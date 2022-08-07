@@ -2,11 +2,11 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useReducer, useRef, useEffect, useCallback } from "react";
 
-import Home from "./Pages/Home";
-import Search from "./Pages/Search";
-import Detail from "./Pages/Detail";
-import New from "./Pages/New";
-import Edit from "./Pages/Edit";
+import Home from "./pages/HomePage/Home";
+import Search from "./pages/SearchPage/Search";
+import Detail from "./pages/DetailPage/Detail";
+import New from "./pages/NewPage/New";
+import Edit from "./pages/EditPage/Edit";
 import SearchStateContext from "./contexts/SearchStateContext";
 
 export const TotalBook = React.createContext();

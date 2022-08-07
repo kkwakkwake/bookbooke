@@ -1,8 +1,8 @@
 import { useEffect, useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import { TotalBook } from "../App";
-import BookEditor from "../Components/BookEditor";
+import { TotalBook } from "../../App";
+import BookEditor from "../../components/BookEditor";
 
 
 const Edit = () => {
@@ -28,7 +28,7 @@ const Edit = () => {
   }, [bookList, id, navigate]);
 
   return (
-    <div className="Edit">
+    <div>
       {selectedBook && <BookEditor editState={true} selectedBook={selectedBook} />}
     </div>
   );
