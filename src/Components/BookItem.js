@@ -11,7 +11,7 @@ const BookItem = ({ id, title, thumbnail, authors, rating }) => {
 
   return (
     <BookItemContainer onClick={() => navigate(`/detail/${id}`)}>
-      <BookItemImg src={thumbnail} alt={title} width="100px" />
+      <BookItemImg style={{ backgroundImage: `url(${thumbnail})` }} ></BookItemImg>
       <BookItemWrapper >
         <h4>{title.length >= 22 ? `${title.slice(0, 22)}···` : title}</h4>
         <p>

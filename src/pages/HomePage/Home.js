@@ -22,7 +22,7 @@ const Home = () => {
   const [date, setDate] = useState(new Date());
 
   const yearRef = useRef(new Date().getFullYear());
-  const curDate = date.getFullYear();
+  const thisYear = date.getFullYear();
 
   const years = [
     { value: parseInt(yearRef.current) },
@@ -32,15 +32,15 @@ const Home = () => {
 
   useEffect(() => {
     if (bookList.length >= 1) {
-      const firstMonth = new Date(curDate, 0, 1, 0, 0).getTime();
-      const lastMonth = new Date(curDate, 11, 31, 23, 59, 59).getTime();
+      const firstMonth = new Date(thisYear, 0, 1, 0, 0).getTime();
+      const lastMonth = new Date(thisYear, 11, 31, 23, 59, 59).getTime();
       setYearlyBooks(
         bookList.filter(
           (item) => item.date >= firstMonth && item.date <= lastMonth
         )
       );
     }
-  }, [bookList, curDate]);
+  }, [bookList, thisYear]);
 
   const handleYearList = useCallback((e) => {
     setDate(new Date(e.target.value, 0));
@@ -51,7 +51,7 @@ const Home = () => {
       <MyHeader
         leftChild={
           <YearList
-            value={curDate}
+            value={thisYear}
             list={years}
             onChange={handleYearList}
           />

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { YearSelection, YearOption } from './styled';
 
-const YearList = React.memo(({ list, onChange }) => {
+const YearList = ({ list, onChange }) => {
   return (
     <YearSelection onChange={onChange}>
       {list.map((year, idx) => (
@@ -10,6 +10,6 @@ const YearList = React.memo(({ list, onChange }) => {
       ))}
     </YearSelection>
   );
-});
+};
 
-export default YearList;
+export default React.memo(YearList);

@@ -16,7 +16,15 @@
 
 .App {
 	font-family: "SUIT";
+	min-height: 100vh;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	margin: auto;
 }
+
 body {
 	background-color: #f6f6f6;
 	display: flex;
@@ -42,14 +50,4 @@ body {
 #root {
 	background-color: white;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.App {
-	min-height: 100vh;
-	padding-left: 20px;
-	padding-right: 20px;
-	display: flex;
-	flex-direction: column;
-	align-content: space-between;
-	margin: auto;
 }

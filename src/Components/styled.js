@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FaRegCheckCircle } from "react-icons/fa";
 
 //BookEditor
 export const BookEditorWrapper = styled.div`
@@ -47,8 +48,11 @@ export const BookItemContainer = styled.div`
   cursor: pointer;  
 `;
 
-export const BookItemImg = styled.img`
+export const BookItemImg = styled.div`
 	width: 130px;
+  height: 180px;
+  background-repeat: no-repeat;
+    background-position: center;
 `;
 
 export const BookItemWrapper = styled.div`
@@ -81,15 +85,19 @@ export const ItemContainer = styled.div`
 	margin-bottom: 15px;
 	border-radius: 10px;
 	box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  position: relative;
+
 `;
 
 export const ItemSection = styled.section`
 	display: flex;
+  margin-right: 30px;
 `;
 
 export const ItemImgs = styled.div`
 	display: flex;
 	align-items: center;
+  justify-content: center;
 	margin-right: 20px;
 `;
 
@@ -107,13 +115,12 @@ export const ItemText = styled.div`
   font-size: 15px;
 `;
 
-export const ItemButton = styled.div`
-	width: 60px;
-	font-size: 20px;
-	cursor: pointer;
-	margin-top: 10px;
-	display: flex;
-	justify-content: space-around;
+export const ItemButton = styled(FaRegCheckCircle)`
+  position: absolute;
+  top:10px;
+  right:15px;
+  font-size: large;
+  cursor: pointer;
 `;
 
 //SearchList 

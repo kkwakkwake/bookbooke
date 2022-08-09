@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ItemContainer, ItemSection, ItemImgs, ItemTitle, ItemInfos, ItemText, ItemButton } from './styled';
 
-import { FaRegCheckCircle } from "react-icons/fa";
-
 const SearchItem = ({ title, publisher, thumbnail, authors, contents }) => {
   const navigate = useNavigate();
   const registerNew = () => {
@@ -21,8 +19,8 @@ const SearchItem = ({ title, publisher, thumbnail, authors, contents }) => {
   return (
     <ItemContainer onClick={registerNew}>
       <ItemSection>
-        <ItemImgs >
-          <img src={thumbnail} alt={title} />
+        <ItemImgs>
+          <img src={thumbnail ? thumbnail : process.env.PUBLIC_URL + '/img/holdingbook.png'} alt={title} />
         </ItemImgs>
         <div>
           <ItemTitle>{title}</ItemTitle>
@@ -30,10 +28,8 @@ const SearchItem = ({ title, publisher, thumbnail, authors, contents }) => {
           <ItemInfos>출판사: {publisher}</ItemInfos>
           <ItemText>{`${contents.slice(0, 55)}···`}</ItemText>
         </div>
-        <ItemButton>
-          <FaRegCheckCircle onClick={registerNew} />
-        </ItemButton>
       </ItemSection>
+      <ItemButton onClick={registerNew}></ItemButton>
     </ItemContainer>
   );
 };

@@ -51,9 +51,11 @@ function App() {
   useEffect(() => {
     const originBookList = localStorage.getItem("myBooks");
     if (originBookList) {
+      //최신순 정렬
       const originBooks = JSON.parse(originBookList).sort(
         (a, b) => parseInt(b.id) - parseInt(a.id)
       );
+      //꺼낸 데이터로 초기화
       if (originBooks.length >= 1) {
         nextId.current = parseInt(originBooks[0].id) + 1;
         dispatch({ type: "INIT", data: originBooks });

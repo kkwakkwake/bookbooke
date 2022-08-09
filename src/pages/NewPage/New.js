@@ -3,12 +3,12 @@ import { useLocation } from "react-router-dom";
 import BookEditor from "../../components/BookEditor";
 
 const New = () => {
-  const state = useLocation();
-
+  const { state } = useLocation();
+  console.log(state);
   return (
-    <div>
-      <BookEditor newBook={state.state} />
-    </div>
+    <>
+      <BookEditor newBook={state} />
+    </>
   );
 };
 

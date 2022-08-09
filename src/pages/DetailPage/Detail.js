@@ -8,10 +8,12 @@ import { MyBookStateContext } from "../../App";
 import MyButton from "../../components/MyButton";
 import MyHeader from "../../components/MyHeader";
 import Stars from "../../assets/Stars";
+import Loading from '../../components/Loading';
 
 const Detail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+
   const books = useContext(TotalBook);
   const { onRemove } = useContext(MyBookStateContext);
 
@@ -19,7 +21,6 @@ const Detail = () => {
 
   const goToEdit = () => {
     navigate(`/edit/${id}`);
-    //console.log(book);
   };
 
   const goToDelete = () => {
@@ -46,8 +47,9 @@ const Detail = () => {
   }, [books, id, navigate]);
 
   if (!book) {
-    return <div>로딩 중 입니다...</div>;
+    return <Loading />;
   } else {
+    //책이 존재할 때
     const { title, authors, rating, content, date, thumbnail, publisher } =
       book;
     const offset = new Date().getTimezoneOffset() * 60000;
@@ -84,7 +86,7 @@ const Detail = () => {
             {Stars.map((item) => (
               <img
                 value={rating}
-                alt={item.star_id}
+                alt='ratingStars'
                 key={item.star_id}
                 src={item.star_img}
               />

@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const DAUM_KEY = `4c05068b551059a91563b4015d008313`;
+const KAKAO_KEY = '4c05068b551059a91563b4015d008313';
 
 const Kakao = axios.create({
   baseURL: `https://dapi.kakao.com`,
   headers: {
-    Authorization: `KakaoAK ${DAUM_KEY}`,
+    Authorization: `KakaoAK ${KAKAO_KEY}`,
   },
 });
 
