@@ -16,6 +16,11 @@ const Search = () => {
   const [text, setText] = useState('');
   const [searching, setSearching] = useState(false);
 
+  useEffect(() => {
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML = `bookbooke | 책 검색 중..`;
+  }, []);
+
   const onEnter = (e) => {
     if (e.keyCode === 13) {
       searchBook(text);

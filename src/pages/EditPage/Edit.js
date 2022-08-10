@@ -13,6 +13,11 @@ const Edit = () => {
   const [selectedBook, setSelectedBook] = useState();
 
   useEffect(() => {
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML = `bookbooke | ${parseInt(id) + 1}번 책 수정 중..`;
+  }, []);
+
+  useEffect(() => {
     if (bookList.length >= 1) {
       const targetBook = bookList.find(
         (item) => parseInt(item.id) === parseInt(id)

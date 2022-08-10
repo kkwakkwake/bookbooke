@@ -202,6 +202,7 @@ export const ItemButton = styled(FaRegCheckCircle)`
   right:1.5rem;
   font-size: large;
   cursor: pointer;
+  color:black;
 `;
 
 //SearchList 
@@ -221,6 +222,7 @@ export const HeaderBtn = styled.button`
   border: none;
   border-radius: 10px;
   margin-left:0.7rem;
+  color:black;
 
   @media (max-width: 480px) {
 	& {
@@ -254,17 +256,42 @@ export const HeaderChild = styled.div`
 //YearList
 export const YearSelection = styled.select`
   border: none;
-  width: 11rem;
   font-size: 3.2rem;
   cursor: pointer;
   font-family: "Hahmlet";
+  background-color: #fff;
+  color:black;
 
   &:focus {
     outline:none;
   }
+
+  @media (max-width: 480px) {
+	& {
+  font-size: 2rem;
+	}
+}
 `;
 
 export const YearOption = styled.option`
   font-size: 1.5rem;
   text-align: right;
+
+  @media (max-width: 480px) {
+	& {
+  font-size: 1rem;
+	}
+}
+`;
+
+//noResult
+export const NoResultContainer = styled.div`
+  width: 60%;
+  margin:0 auto;
+  text-align:center;
+
+  h3 {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 `;
