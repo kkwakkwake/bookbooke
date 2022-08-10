@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { BookEditorWrapper, BookTitleInfo, BookInfo, BookEditorImg, BookEditorText } from './styled';
+import { BookEditorWrapper, BookTitleInfo, BookInfo, BookEditorImg, BookEditorText, BookItemStars } from './styled';
 
 import MyHeader from "./MyHeader";
 import MyButton from "./MyButton";
@@ -135,7 +135,7 @@ const BookEditor = ({ selectedBook, editState, newBook }) => {
           </BookInfo>
           <BookInfo>출판사 : {origindata.publisher}</BookInfo>
           <BookEditorImg src={origindata.thumbnail ? origindata.thumbnail : process.env.PUBLIC_URL + '/img/holdingbook.png'} alt="bookcover" />
-          <div>
+          <BookItemStars>
             {Stars.map((item) => (
               <BookEditorImg
                 name="rating"
@@ -146,7 +146,7 @@ const BookEditor = ({ selectedBook, editState, newBook }) => {
                 src={item.star_img}
               />
             ))}
-          </div>
+          </BookItemStars>
           <BookEditorText
             name="content"
             value={origindata.content}

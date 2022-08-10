@@ -8,16 +8,22 @@ export const DetailContainer = styled.div`
 `;
 
 export const DetailTitle = styled.h2`
-  margin:10px auto;
+  margin:1.5rem auto;
+  font-size: 1.8rem;
 `;
 
-export const DetailInfos = styled.p`
-  margin: 10px auto;
+export const DetailInfos = styled.h3`
+  font-weight: 300;
+  margin: 1rem auto;
 	color: gray;
+  font-size: 1.5rem;
 `;
 export const DetailStars = styled.div`
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  img{
+    width: 2rem;
+  }
 `;
 
 export const DetailContentWrapper = styled.div`
@@ -29,9 +35,9 @@ export const DetailContentWrapper = styled.div`
 `;
 
 export const DetailContent = styled.p`
-  padding: 10px;
+  padding: 1rem;
   text-align: left;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5;
 `;
