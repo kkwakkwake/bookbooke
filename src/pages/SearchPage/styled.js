@@ -39,4 +39,5 @@ export const SearchButton = styled.button`
 	font-weight: bold;
 	background-color: #f3dad8;
 	cursor: pointer;
+	color:black;
 `;

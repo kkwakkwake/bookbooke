@@ -11,6 +11,7 @@ import BookList from "../../components/BookList";
 import MyHeader from "../../components/MyHeader";
 import MyButton from "../../components/MyButton";
 import YearList from '../../components/YearList';
+import NoResult from '../../components/NoResult';
 import { TotalBook } from "../../App";
 
 
@@ -42,6 +43,11 @@ const Home = () => {
     }
   }, [bookList, thisYear]);
 
+  useEffect(() => {
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML = `bookbooke`;
+  }, []);
+
   const handleYearList = useCallback((e) => {
     setDate(new Date(e.target.value, 0));
   }, []);
@@ -60,7 +66,7 @@ const Home = () => {
           <MyButton text={"책 추가"} onClick={() => navigate("/search")} />
         }
       />
-      {yearlyBooks && <BookList bookList={yearlyBooks} />}
+      {yearlyBooks ? <BookList bookList={yearlyBooks} /> : <NoResult />}
     </div>
   );
 };

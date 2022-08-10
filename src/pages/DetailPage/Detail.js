@@ -19,6 +19,11 @@ const Detail = () => {
 
   const [book, setBook] = useState();
 
+  useEffect(() => {
+    const titleElement = document.getElementsByTagName('title')[0];
+    titleElement.innerHTML = `bookbooke | ${parseInt(id) + 1}번 책`;
+  }, []);
+
   const goToEdit = () => {
     navigate(`/edit/${id}`);
   };
