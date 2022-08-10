@@ -1,6 +1,6 @@
 # 📚 bookbooke
 > kakao 책 검색api를 활용한 독서기록장   
-> https://kkwakkwake-bookbooke.web.app/
+> 배포: https://kkwakkwake-bookbooke.web.app/
 
 </br>
 
