@@ -33,6 +33,11 @@
 </br>
 
 ## 5. 회고
+> https://www.notion.so/bookbooke-87e8c5fa6c4b47488c1e965c7a80b410   
+> 🔎컴포넌트 재사용
+> 🔎fetch 대신 처음으로 axios 를 선택! 
+> 
+
 
 
 <!-- <details>
