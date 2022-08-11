@@ -16,14 +16,19 @@
 </br>
 
 ## 3. 핵심기능
-* api를 활용한 도서 검색 기능
-* CRUD (local storage)
+* 도서 검색
+* 독서기록 조회
+* 독서기록 등록
+* 독서기록 수정
+* 독서기록 삭제
 * 평점기능
 
 </br>
 
 ## 4.트러블슈팅
 > https://www.notion.so/b8ab952fb3c94adda6dc3ff69e8045d7?v=9510c0d5e02444cf9ffac129524c2c40   
+
+</br>
 
 ## 5. 회고
 
