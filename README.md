@@ -28,7 +28,8 @@
 </br>
 
 ## 4.트러블슈팅
-> https://www.notion.so/b8ab952fb3c94adda6dc3ff69e8045d7?v=9510c0d5e02444cf9ffac129524c2c40   
+> https://shocking-double-bf4.notion.site/b8ab952fb3c94adda6dc3ff69e8045d7?v=9510c0d5e02444cf9ffac129524c2c40   
+
 
 </br>
 
