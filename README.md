@@ -34,11 +34,13 @@
 
 ## 5. 회고
 > https://www.notion.so/bookbooke-87e8c5fa6c4b47488c1e965c7a80b410   
-> 🔎컴포넌트 재사용
-> 🔎fetch 대신 처음으로 axios 를 선택! 
-> 
+> 🔎컴포넌트 재사용   
+> 🔎fetch 대신 처음으로 axios 를 선택!    
+> 🔎최적화는 언제 해야될까?   
+> 🔎styled-components 사용해보니 좋다 🤭   
+> 🔎반응형 웹을 할꺼면 미리 설계해야겠다^_^   
 
-
+</br>
 
 <!-- <details>
 <summary><b>백엔드</b></summary>
