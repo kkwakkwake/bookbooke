@@ -4,9 +4,6 @@
 
 </br>
 
-![bookbooke_pics](https://user-images.githubusercontent.com/99951752/185039698-6d76c12e-971e-4909-8fbf-62d4f8cc0c41.jpg)
-
-
 ## 1. 제작기간
 * 개인 프로젝트
 * 2022.06.01~2022.06.10
